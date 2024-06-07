@@ -12,8 +12,6 @@
                 <img src = "img/Intro1.jpg" alt = "meal table">
             </div>
         </div>
-    </div>
-    </div>
 
 <!--==== BESTSELLER ====-->
 <div class = "small-container">

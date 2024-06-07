@@ -29,7 +29,8 @@
             </nav>
         </div>
 
-
+    </div>
+    </div>
         @yield('content')
 
    <!--==== footer ====-->
