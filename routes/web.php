@@ -12,6 +12,10 @@ Route::get('/about', function () {
     return view('about');
 });
 
+Route::get('/menus', function () {
+    return view('menus');
+});
+
 Route::get('/meal/{id}', [MealController::class, 'show'])->name('meal.show');
 Route::post('/meal/{id}/add-to-cart', [MealController::class, 'addToCart'])->name('cart.add');
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
