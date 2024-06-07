@@ -144,7 +144,7 @@ $meal11->total_time = '15 Min';
 $meal11->difficulty = 'Easy';
 $meal11->ingredients = 'Salmon, Tortilla, Lettuce, Tomato, Avocado';
 $meal11->allergens = 'Fish';
-$meal1->tag = 'Halal';
+$meal11->tag = 'Halal';
 $meal11->save();
 
 // Menu 12: Cream Gnocchi
