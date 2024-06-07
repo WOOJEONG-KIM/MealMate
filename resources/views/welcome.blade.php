@@ -1,6 +1,20 @@
 @extends('layouts.layout')
 
 @section('content')
+
+<div class = "row">
+            <div class = "col-2">
+                <h1>Welcome!</h1>
+                <p>Experience the joy of simple cooking<br>with fresh ingredients</p>
+                <a href = "" class = "button">ABOUT</a> 
+            </div>
+            <div class = "col-2">
+                <img src = "img/Intro1.jpg" alt = "meal table">
+            </div>
+        </div>
+    </div>
+    </div>
+
 <!--==== BESTSELLER ====-->
 <div class = "small-container">
     <h2 class = "title">Bestseller</h2>
