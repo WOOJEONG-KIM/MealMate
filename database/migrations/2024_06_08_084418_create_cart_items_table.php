@@ -25,3 +25,4 @@ class CreateCartItemsTable extends Migration
         Schema::dropIfExists('cart_items');
     }
 }
+

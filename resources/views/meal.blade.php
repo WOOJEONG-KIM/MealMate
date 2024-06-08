@@ -14,9 +14,9 @@
         .container { width: 80%; margin: auto; }
         .header, .footer { background-color: #5F0080; color: white; text-align: center; padding: 20px 0; }
         .header nav a, .footer a { color: white; text-decoration: none; margin: 0 10px; }
-        .header nav a:hover, .footer a:hover { text-decoration: underline; }
-        .meal-detail { display: flex; justify-content: space-between; margin-top: 20px; background-color: white; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
-        .meal-image img { width: 100%; height: auto; }
+        /* .header nav a:hover, .footer a:hover { text-decoration: underline; } */
+        .meal-detail { display: flex; justify-content: center; margin-top: 20px; background-color: white; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        .meal-image img { width: 50%; height: auto; }
         .meal-info { width: 50%; padding-left: 20px; }
         .meal-info h2 { margin-bottom: 10px; }
         .meal-info p { margin: 5px 0; }
@@ -35,7 +35,7 @@
     <div class="container">
         <div class="meal-detail">
             <div class="meal-image">
-                <img src="{{ asset('images/' . $meal->image) }}" alt="{{ $meal->name }}">
+                <img src="{{ asset('img/' . $meal->image) }}" alt="{{ $meal->name }}">
             </div>
             <div class="meal-info">
                 <h2>{{ $meal->name }}</h2>
@@ -58,7 +58,7 @@
             @foreach($relatedMeals as $relatedMeal)
                 <div class="product">
                     <a href="{{ route('meal.show', $relatedMeal->id) }}">
-                        <img src="{{ asset('images/' . $relatedMeal->image) }}" alt="{{ $relatedMeal->name }}">
+                        <img src="{{ asset('img/' . $relatedMeal->image) }}" alt="{{ $relatedMeal->name }}">
                         <h4>{{ $relatedMeal->name }}</h4>
                         <p>Body text for {{ $relatedMeal->name }}</p>
                         <p>${{ $relatedMeal->price }}</p>

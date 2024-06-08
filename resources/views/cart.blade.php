@@ -1,4 +1,7 @@
 <!-- resources/views/cart.blade.php -->
+@extends('layouts.layout')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +14,7 @@
         .container { width: 80%; margin: auto; }
         .header, .footer { background-color: #5F0080; color: white; text-align: center; padding: 20px 0; }
         .header nav a, .footer a { color: white; text-decoration: none; margin: 0 10px; }
-        .header nav a:hover, .footer a:hover { text-decoration: underline; }
+        /* .header nav a:hover, .footer a:hover { text-decoration: underline; } */
         .cart { background-color: white; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin-top: 20px; }
         .cart h2 { margin-bottom: 20px; }
         .cart table { width: 100%; border-collapse: collapse; }
@@ -24,15 +27,6 @@
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Meal Mate</h1>
-        <nav>
-            <a href="#">ABOUT</a>
-            <a href="#">MENUS</a>
-            <a href="#">MY CART</a>
-            <a href="#" class="btn">Login (Optional)</a>
-        </nav>
-    </div>
 
     <div class="container">
         <div class="cart">
@@ -91,15 +85,7 @@
         </div>
     </div>
 
-    <div class="footer">
-        <div>Site name</div>
-        <div>Topic | Topic | Topic</div>
-        <div>
-            <a href="#">Facebook</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">YouTube</a>
-            <a href="#">Instagram</a>
-        </div>
-    </div>
 </body>
 </html>
+
+@endsection
