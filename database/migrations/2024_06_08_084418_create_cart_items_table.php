@@ -1,19 +1,21 @@
 <?php
 
+// database/migrations/xxxx_xx_xx_create_cart_items_table.php
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateCartItemsTable extends Migration
 {
     public function up()
     {
         Schema::create('cart_items', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('product_id')->constrained('meals')->onDelete('cascade');
             $table->string('product');
-            $table->integer('unit_price');
+            $table->decimal('unit_price', 8, 2);
             $table->integer('quantity');
-            $table->integer('total');
+            $table->decimal('total', 8, 2);
             $table->timestamps();
         });
     }
@@ -22,4 +24,5 @@ return new class extends Migration
     {
         Schema::dropIfExists('cart_items');
     }
-};
+}
+

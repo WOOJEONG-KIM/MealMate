@@ -1,5 +1,6 @@
 <?php
 
+// database/migrations/xxxx_xx_xx_create_meals_table.php
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,6 +18,7 @@ return new class extends Migration
             $table->string('difficulty')->nullable();
             $table->text('ingredients')->nullable();
             $table->text('allergens')->nullable();
+            $table->string('tag')->nullable();
             $table->timestamps();
         });
     }
@@ -26,3 +28,4 @@ return new class extends Migration
         Schema::dropIfExists('meals');
     }
 };
+

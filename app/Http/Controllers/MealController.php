@@ -1,5 +1,6 @@
 <?php
 
+// app/Http/Controllers/MealController.php
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -18,13 +19,22 @@ class MealController extends Controller
     public function addToCart(Request $request, $id)
     {
         $meal = Meal::findOrFail($id);
-        
-        CartItem::create([
-            'product' => $meal->name,
-            'unit_price' => $meal->price,
-            'quantity' => 1, // You can modify this to handle different quantities
-            'total' => $meal->price,
-        ]);
+
+        $cartItem = CartItem::where('product_id', $meal->id)->first();
+
+        if ($cartItem) {
+            $cartItem->quantity += 1;
+            $cartItem->total = $cartItem->unit_price * $cartItem->quantity;
+            $cartItem->save();
+        } else {
+            CartItem::create([
+                'product_id' => $meal->id,
+                'product' => $meal->name,
+                'unit_price' => $meal->price,
+                'quantity' => 1,
+                'total' => $meal->price,
+            ]);
+        }
 
         return redirect()->route('cart.index');
     }
