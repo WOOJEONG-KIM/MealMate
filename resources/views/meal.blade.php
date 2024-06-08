@@ -1,4 +1,7 @@
 <!-- resources/views/meal.blade.php -->
+@extends('layouts.layout')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,14 +31,6 @@
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Meal Mate</h1>
-        <nav>
-            <a href="#">ABOUT</a>
-            <a href="#">MENUS</a>
-            <a href="/cart">MY CART</a>
-        </nav>
-    </div>
 
     <div class="container">
         <div class="meal-detail">
@@ -73,15 +68,7 @@
         </div>
     </div>
 
-    <div class="footer">
-        <div>Site name</div>
-        <div>Topic | Topic | Topic</div>
-        <div>
-            <a href="#">Facebook</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">YouTube</a>
-            <a href="#">Instagram</a>
-        </div>
-    </div>
 </body>
 </html>
+
+@endsection

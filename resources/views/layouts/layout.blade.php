@@ -17,14 +17,14 @@
     <div class = "container">
         <div class = "navbar">
             <div class = "logo">
-                <a href = "index.html"><img src = "img/mealmate_logo1.png" alt = "meal time logo" width = "125px"></a>
+                <a href = "/"><img src = "img/mealmate_logo1.png" alt = "meal time logo" width = "125px"></a>
             </div>
     
             <nav>
                 <ul>
-                    <li><a href = "#">ABOUT</a></li>
-                    <li><a href = "#">MENUS</a></li>
-                    <li><a href = "#">MY CART</a></li>
+                    <li><a href = "/about">ABOUT</a></li>
+                    <li><a href = "/menus">MENUS</a></li>
+                    <li><a href = "/cart">MY CART</a></li>
                 </ul>
             </nav>
         </div>
