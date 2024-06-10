@@ -11,8 +11,5 @@
         <img src = "img/intro2.jpg" alt = "meal table">
     </div>
 </div>
-    <!-- </div>
-    </div> -->
-
 
 @endsection

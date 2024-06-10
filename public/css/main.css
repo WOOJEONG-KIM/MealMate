@@ -4,11 +4,9 @@
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Poppins', sans-serif;
+body {
+    font-family: "Poppins", sans-serif;
 }
-
-
 
 .navbar {
     display: flex;
@@ -34,13 +32,18 @@ nav ul li {
     margin-right: 20px;
 }
 
+.nav-link {
+    color: #5f0080;
+    text-decoration: none;
+}
+
 a {
     text-decoration: none;
-    color: #5F0080;
+    color: #5f0080;
 }
 
 p {
-    color: #5F0080;
+    color: #5f0080;
 }
 
 .container {
@@ -83,7 +86,7 @@ p {
 
 .button {
     display: inline-block;
-    background: #5F0080;
+    background: #5f0080;
     color: #fff;
     padding: 4px 15px;
     margin: 30px 0;
@@ -116,7 +119,7 @@ p {
     /*margin: 0 auto 80px;*/
     position: relative;
     line-height: 60px;
-    color: #5F0080;
+    color: #5f0080;
 }
 
 h4 {
@@ -160,7 +163,7 @@ h4 {
 /*--------footer--------*/
 
 .footer {
-    background: #5F0080;
+    background: #5f0080;
     color: #8a8a8a;
     font-size: 14px;
     padding: 60px 0 20px;
@@ -175,7 +178,10 @@ h4 {
     margin-bottom: 20px;
 }
 
-.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 {
+.footer-col-1,
+.footer-col-2,
+.footer-col-3,
+.footer-col-4 {
     min-width: 250px;
     margin-bottom: 20px;
 }
@@ -195,7 +201,8 @@ h4 {
     margin-bottom: 20px;
 }
 
-.footer-col-3, .footer-col-4 {
+.footer-col-3,
+.footer-col-4 {
     flex-basis: 12%;
     text-align: center;
 }
@@ -203,4 +210,49 @@ h4 {
 ul {
     list-style-type: none;
     color: #fff;
+}
+
+.checkout {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.checkout h2 {
+    margin-bottom: 20px;
+}
+
+.checkout-form {
+    max-width: 400px;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.btn-checkout {
+    background-color: #5f0080;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-checkout:hover {
+    opacity: 0.8;
 }

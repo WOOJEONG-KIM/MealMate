@@ -1,18 +1,23 @@
 <?php
 
-// app/Http/Controllers/CartController.php
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\CartItem;
+use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
     public function index()
     {
-        $cartItems = CartItem::all();
-        $totalProduct = $cartItems->sum('total');
-        $shippingFee = 50; // Example static shipping fee
+        $user = Auth::user();
+        if (!$user) {
+            return redirect()->route('login');
+        }
+
+        $cartItems = CartItem::where('user_id', $user->id)->get();
+        $totalProduct = $cartItems ? $cartItems->sum('total') : 0;
+        $shippingFee = 10;
         $total = $totalProduct + $shippingFee;
 
         return view('cart', compact('cartItems', 'totalProduct', 'shippingFee', 'total'));
@@ -20,7 +25,8 @@ class CartController extends Controller
 
     public function update(Request $request, $id)
     {
-        $cartItem = CartItem::findOrFail($id);
+        $user = Auth::user();
+        $cartItem = CartItem::where('user_id', $user->id)->findOrFail($id);
         $quantity = $request->input('quantity');
 
         if ($quantity <= 0) {
@@ -36,7 +42,10 @@ class CartController extends Controller
 
     public function destroy($id)
     {
-        CartItem::destroy($id);
+        $user = Auth::user();
+        $cartItem = CartItem::where('user_id', $user->id)->findOrFail($id);
+        $cartItem->delete();
+
         return redirect()->route('cart.index');
     }
 }
